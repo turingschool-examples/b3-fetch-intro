@@ -1,0 +1,399 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: #ececec;
+}
+
+.title {
+  text-align: center;
+  padding: 20px 0;
+  color: #313132;
+  font-size: 220%;
+  text-transform: uppercase;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin: 0px auto;
+  padding: 10px 40px 40px 40px;
+  width: 90%;
+  background-color: #f7f7f7;
+}
+
+.instruction-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.instruction-aside {
+  background-color: #fff;
+  color: #313132;
+  border-radius: 1px;
+  margin: 10px 0px 30px 0px;
+  padding: 10px;
+  width: 22.5%;
+}
+
+.instructions-text {
+  font-size: 80%;
+}
+
+.main-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-left {
+  width: 55%;
+}
+
+.pick-palette {
+  padding-bottom: 15px;
+  background-color: #fff;
+  border-radius: 1px;
+  color: #313132;
+}
+
+.hex-code {
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.colors {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.color {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 55vh;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.empty-heart-icon {
+  background-image: url(./assets/unlock.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+  margin-top: 15px;
+}
+
+.full-heart-icon {
+  background-image: url(./assets/padlock.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+  margin-top: 15px;
+}
+
+.generate-btn {
+  display: block;
+  height: 40px;
+  margin: 0 auto;
+  padding: 3px 5px;
+  width: 100%;
+  background-color: #313132;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 90%;
+  outline: none;
+}
+
+.generate-btn:hover {
+  background-color: #DADAE2;
+  cursor: pointer;
+}
+
+.save-palette {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 1px;
+  color: #313132;
+}
+
+#project-menu {
+  height: 25px;
+  width: 22.5%;
+  margin-right: 10px;
+  border: none;
+  background-color: #313132;
+  color: #fff;
+  outline: none;
+}
+
+.new-palette-container {
+  margin: 23px 0px 12px 0px;
+  text-align: center;
+}
+
+.palette-subtitle {
+  margin: 10px 0;
+}
+
+#new-palette {
+  height: 25px;
+  width: 40%;
+  margin-right: 10px;
+  padding-left: 5px;
+  border: none;
+  border: 1px solid #313132;
+  border-radius: 2px;
+  font-size: 75%;
+}
+
+#new-palette::placeholder {
+  color: grey;
+}
+
+#new-palette:focus {
+  outline: none;
+}
+
+#new-palette-btn {
+  height: 25px;
+  width: 22.5%;
+  background-color: #313132;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 75%;
+  outline: none;
+}
+
+#new-palette-btn:hover {
+  background-color: #DADAE2;
+  cursor: pointer;
+}
+
+.projects {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 1px;
+  color: #313132;
+}
+
+.projects-subtitle {
+  padding-bottom: 12px;
+  font-size: 150%;
+}
+
+.project-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#new-project {
+  height: 25px;
+  width: 65%;
+  padding-left: 5px;
+  border: none;
+  border: 1px solid #313132;
+  border-radius: 2px;
+  font-size: 75%;
+}
+
+#new-project::placeholder {
+  color: grey;
+}
+
+#new-project:focus {
+  outline: none;
+}
+
+#new-project-btn {
+  height: 25px;
+  width: 32.5%;
+  background-color: #313132;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  outline: none;
+}
+
+#new-project-btn:hover {
+  background-color: #DADAE2;
+  cursor: pointer;
+}
+
+.project-directory {
+  margin-top: 30px;
+}
+
+.saved-project {
+  margin: 10px 0 30px 2px;
+}
+
+.project-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.delete-project {
+  background-color: #BFBFC2;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  outline: none;
+  padding: 0 8px;
+}
+
+.delete-project:hover {
+  background-color: #DFDFE1;
+}
+
+.project-list {
+  margin-left: 20px;
+}
+
+li {
+  display: grid;
+  grid-template-columns: 2.5fr 2.5fr 0.25fr;
+  grid-template-areas: "name palette delete";
+  padding-top: 10px;
+  width: 90%;
+}
+
+.small-palette-name {
+  margin-right: 10px;
+  grid-area: name;
+}
+
+.small-palette {
+  display: flex;
+  flex-direction: row;
+  grid-area: palette;
+}
+
+.palette-color {
+  height: 20px;
+  width: 20px;
+}
+
+.delete-icon {
+  height: 10px;
+  width: 10px;
+  margin-top: 5px;
+  background-image: url(./assets/delete-icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-area: delete;
+}
+
+.delete-icon:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+
+  .instruction-aside {
+    width: 24%;
+  }
+
+  .main-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-left {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .projects {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .project-directory {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .saved-project {
+    width: 44%;
+    margin-right: 5%;
+  }
+
+  .palette-color {
+    width: 16px;
+    height: 18px;
+  }
+
+  .color {
+    height: 40vh;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .main {
+    padding: 10px 30px 40px 30px;
+  }
+
+  .instruction-section {
+    flex-direction: column;
+  }
+
+  .instruction-aside {
+    width: 100%;
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  .projects {
+    margin-top: 20px;
+  }
+
+  .project-directory {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projects-subtitle {
+    text-align: center;
+  }
+
+  .project-form {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .saved-project {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .palette-color {
+    width: 20px;
+    height: 20px;
+  }
+
+}
